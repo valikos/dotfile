@@ -1,35 +1,49 @@
 [user]
-	name = Valentine Ostakh
-	email = valikos.ost@gmail.com
+  name = Valentine Ostakh
+  email = valentine.ostakh@ecommerce.com
+
 [color]
-	status = auto
-	branch = auto
-	interactive = auto
-	diff = auto
-	ui = true
-[core]
-	excludesfile = /home/valikos/.gitignore_global
-[alias]
-	com = commit
-	co = checkout
-	br = branch
-	# Log display from screencast, with train tracks.
-	l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
-	# Alternate log display from Scott Chacon
-	lol = log --pretty=oneline --abbrev-commit --graph --decorate
-	# Other useful aliases:
-	unstage = reset HEAD
-	staged = diff --cached
-	unstaged = diff
-	current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
-	# Usage: git track origin/feature-123-login-form
-	track = checkout -t
-	undo = reset --soft HEAD^
-	graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
-[help]
-	autocorrect = 1
-[status]
-	submodule = 1
+  status = auto
+  branch = auto
+  interactive = auto
+  diff = auto
+  ui = true
+
 [push]
-	# Only push branches that have been set up to track a remote branch.
-	default = current
+  default = simple
+
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
+
+[core]
+  excludesfile = /Users/valikos/.gitignore_global
+
+[alias]
+  com = commit
+  co = checkout
+  br = branch
+
+  # Log display from screencast, with train tracks.
+  l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+  # Alternate log display from Scott Chacon
+  lol = log --pretty=oneline --abbrev-commit --graph --decorate
+  # Other useful aliases:
+  unstage = reset HEAD
+  staged = diff --cached
+  unstaged = diff
+  current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
+  # Usage: git track origin/feature-123-login-form
+  track = checkout -t
+  undo = reset --soft HEAD^
+  graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+
+[help]
+  autocorrect = 1
+
+[status]
+  submodule = 1
