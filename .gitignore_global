@@ -1,6 +1,7 @@
 # OSX       taken from: https://github.com/github/gitignore/blob/master/Global/OSX.gitignore
 # ----------------------------------------------------------------------------------------------
 .DS_Store
+.DS_Store?
 # Thumbnails
 ._*
 # Files that might appear on external disk
@@ -11,6 +12,8 @@
 # ----------------------------------------------------------------------------------------------
 # Windows image file caches
 Thumbs.db
+
+ehthumbs.db
 
 # Folder config file
 Desktop.ini
@@ -30,3 +33,8 @@ Session.vim
 # SASS
 # ----------------------------------------------------------------------------------------------
 .sass-cache
+
+# Sublime Text 3 - project
+# ----------------------------------------------------------------------------------------------
+*.sublime-project
+*.sublime-workspace
